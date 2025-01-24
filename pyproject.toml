@@ -39,3 +39,6 @@ dependencies = [
 find-links = [
     "https://download.pytorch.org/whl/torch",
 ]
+
+[tool.setuptools]
+py-modules = []
