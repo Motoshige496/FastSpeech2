@@ -15,7 +15,7 @@ dependencies = [
     "torch==2.1.2; sys_platform == 'darwin' and platform_machine == 'arm64'",
     
     # Other platforms (Linux ARM, Windows)
-    "torch==2.5.0; (sys_platform == 'linux' and platform_machine == 'aarch64') or sys_platform == 'win32'",
+    "torch==2.5.0+cpu; (sys_platform == 'linux' and platform_machine == 'aarch64') or sys_platform == 'win32'",
 
     "g2p-en>=2.1.0",
     "inflect>=4.1.0",
