@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "fastspeech2"
 version = "0.1.0"
@@ -7,13 +11,13 @@ requires-python = ">=3.11"
 dependencies = [
     # Linux x86_64 with CUDA
     "torch==2.5.0+cu118; sys_platform == 'linux' and platform_machine == 'x86_64'",
-    
+
     # Mac Intel
     "torch==2.1.2; sys_platform == 'darwin' and platform_machine == 'x86_64'",
-    
+
     # Mac M1/M2
     "torch==2.1.2; sys_platform == 'darwin' and platform_machine == 'arm64'",
-    
+
     # Other platforms (Linux ARM, Windows)
     "torch==2.5.0+cpu; (sys_platform == 'linux' and platform_machine == 'aarch64') or sys_platform == 'win32'",
 
@@ -33,11 +37,6 @@ dependencies = [
     "tgt>=1.4.4",
     "tqdm>=4.46.1",
     "unidecode>=1.1.1",
-]
-
-[tool.uv]
-find-links = [
-    "https://download.pytorch.org/whl/torch",
 ]
 
 [tool.setuptools]
