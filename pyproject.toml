@@ -41,3 +41,17 @@ dependencies = [
 
 [tool.setuptools]
 py-modules = []
+packages = [
+    "audio",
+    "config",
+    "demo",
+    "hifigan",
+    "img",
+    "lexicon",
+    "model",
+    "preprocessed_data",
+    "preprocessor",
+    "text",
+    "transformer",
+    "utils"
+]
