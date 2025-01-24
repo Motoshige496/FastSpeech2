@@ -1,0 +1,41 @@
+[project]
+name = "fastspeech2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Linux x86_64 with CUDA
+    "torch==2.5.0+cu118; sys_platform == 'linux' and platform_machine == 'x86_64'",
+    
+    # Mac Intel
+    "torch==2.1.2; sys_platform == 'darwin' and platform_machine == 'x86_64'",
+    
+    # Mac M1/M2
+    "torch==2.1.2; sys_platform == 'darwin' and platform_machine == 'arm64'",
+    
+    # Other platforms (Linux ARM, Windows)
+    "torch==2.5.0; (sys_platform == 'linux' and platform_machine == 'aarch64') or sys_platform == 'win32'",
+
+    "g2p-en>=2.1.0",
+    "inflect>=4.1.0",
+    "librosa>=0.7.2",
+    "matplotlib>=3.2.2",
+    "numba>=0.48",
+    "numpy>=1.19.0",
+    "pypinyin>=0.39.0",
+    "pyworld>=0.2.10",
+    "PyYAML>=5.4.1",
+    "scikit-learn>=0.23.2",
+    "scipy>=1.5.0",
+    "soundfile>=0.10.3.post1",
+    "tensorboard>=2.2.2",
+    "tgt>=1.4.4",
+    "tqdm>=4.46.1",
+    "unidecode>=1.1.1",
+]
+
+[tool.uv]
+find-links = [
+    "https://download.pytorch.org/whl/torch",
+]
